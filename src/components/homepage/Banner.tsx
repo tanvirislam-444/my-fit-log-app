@@ -1,5 +1,11 @@
 import bannerImg from '@/assets/banner.png'
 import Image from 'next/image';
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({
+  subsets: ['latin'],
+})
+
 const Banner = () => {
     return (
 <div className="mx-4 my-5 md:mx-8 lg:mx-10 bg-[#9ca3af10] p-6 md:p-8 lg:p-10 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-8 lg:gap-40">
@@ -9,7 +15,7 @@ const Banner = () => {
       WORKOUT LIBRARY
     </p>
 
-    <h1 className="text-3xl md:text-4xl lg:text-5xl lg:w-150 font-bold pb-4 md:pb-5">
+    <h1 className={`${oswald.className} text-3xl md:text-4xl lg:text-5xl lg:w-150 font-bold pb-4 md:pb-5`}>
       TRAIN WITH INTENT. LOG EVERY SET.
     </h1>
 

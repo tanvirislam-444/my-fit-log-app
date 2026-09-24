@@ -13,16 +13,16 @@ const Navbar = () => {
       <ul
         tabIndex={-1}
         className=" dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow ">
-        <li><Link href='/' className='pb-10'>Workouts</Link></li>
-        <li><Link href='/' className='pb-10'>My Plan</Link></li>
+        <li><Link href='/'>Workouts</Link></li>
+        <li><Link href='/'>My Plan</Link></li>
       </ul>
     </div>
 <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 lg:static lg:translate-x-0">
   <Image
     src={logo}
     alt="FITLOG logo"
-    width={32}
-    height={32}
+    width={25}
+    height={25}
   />
   <div className="font-bold">FITLOG</div>
 </div>
