@@ -1,9 +1,14 @@
 import Image from 'next/image';
 import { Clock,Flame, Star } from "lucide-react";
+import { MainType } from '@/types/main.type';
+import Link from 'next/link';
+interface LibraryTypeProps{
+    library:MainType
+}
 
-
-const LibraryCard = ({library}) => {
+const LibraryCard = ({library}:LibraryTypeProps) => {
     return (
+      <Link href={`/workoutdetails/${library.id}`}>
             <div 
                 className="bg-[#111827] rounded-2xl overflow-hidden border border-[#1F2937] shadow-lg"
             >
@@ -15,9 +20,6 @@ const LibraryCard = ({library}) => {
               height={700}
               className="w-full h-56 object-cover"
             />
-            <button className="absolute bottom-4 right-4 bg-[#C2F800] text-black w-10 h-10 rounded-full text-2xl font-bold">
-              +
-            </button>
           </div>
 
           <div className="p-5">
@@ -57,6 +59,7 @@ const LibraryCard = ({library}) => {
 
           </div>
         </div>
+        </Link>
     );
 };
 

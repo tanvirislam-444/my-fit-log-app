@@ -13,8 +13,8 @@ const Navbar = () => {
       <ul
         tabIndex={-1}
         className=" dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow ">
-        <li><Link href='/'>Workouts</Link></li>
-        <li><Link href='/'>My Plan</Link></li>
+        <Link href='/'>Workouts</Link>
+        <Link href='/'>My Plan</Link>
       </ul>
     </div>
 <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 lg:static lg:translate-x-0">
