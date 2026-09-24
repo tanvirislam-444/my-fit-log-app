@@ -13,8 +13,8 @@ const Navbar = () => {
       <ul
         tabIndex={-1}
         className=" dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow ">
-        <Link href='/'>Workouts</Link>
-        <Link href='/'>My Plan</Link>
+        <li><Link href='/listed-plan'>Workouts</Link></li>
+        <li><Link href='/listed-plan'>My Plan</Link></li>
       </ul>
     </div>
 <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 lg:static lg:translate-x-0">
@@ -29,8 +29,8 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-        <li><Link href='/' className='text-[#C2F800] rounded-2xl px-3'>Workouts</Link></li>
-        <li><Link href='/' className='rounded-2xl px-3 text-[#9CA3AF]'>My Plan</Link></li>
+        <li><Link href='/listed-plan' className='text-[#C2F800] rounded-2xl px-3'>Workouts</Link></li>
+        <li><Link href='/listed-plan' className='rounded-2xl px-3 text-[#9CA3AF]'>My Plan</Link></li>
     </ul>
   </div>
   <div className="navbar-end mr-3">

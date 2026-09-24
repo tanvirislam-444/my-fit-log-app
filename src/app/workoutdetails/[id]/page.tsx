@@ -1,10 +1,8 @@
 import { MainType } from "@/types/main.type";
 import Image from "next/image";
-import {
- CalendarCheck,
- ListChecks,
-  Bookmark,
-} from "lucide-react";
+import {ListChecks} from "lucide-react";
+import AddPlanButton from "@/components/workoutDetails/AddPlanButton";
+import SaveButton from "@/components/workoutDetails/SaveButton";
 
 interface WorkoutDetailsProps {
   params: Promise<{
@@ -159,16 +157,9 @@ const WorkoutDetailsPage = async ({ params }: WorkoutDetailsProps) => {
               </ol>
             </div>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <button className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#C2F800] px-5 py-3 font-bold text-black hover:bg-[#b5e800]">
-                <CalendarCheck size={20} />
-                Add to today&apos;s plan
-              </button>
-
-              <button className="flex flex-1 items-center justify-center gap-2 rounded-lg border border-[#374151] px-5 py-3 font-semibold text-white hover:bg-[#1F2937]">
-                <Bookmark size={20} />
-                Save for later
-              </button>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+           <AddPlanButton library={library}/>
+           <SaveButton library={library}/>
             </div>
           </div>
         </div>
