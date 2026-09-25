@@ -11,8 +11,12 @@ const AddPlanButton = ({library}:{library:MainType}) => {
 const {myPlan,setMyPlan}= useContext(MyPlanContext);
 
     const handleMyPlan=()=>{
-     console.log ('read button trigured' ,library);
-     setMyPlan([...myPlan,library]);
+    const alreadyAdded = myPlan.some((item)=>item.id===library.id);
+    
+    if(alreadyAdded){
+      toast.error("Already in your plan");
+      return;
+    }setMyPlan([...myPlan,library]);
      toast.success("Add to today's plan");
     }
     return (

@@ -11,8 +11,13 @@ const SaveButton = ({library}:{library:MainType}) => {
 const {savePlan,setSavePlan}= useContext(MyPlanContext);
 
     const handleMyPlan=()=>{
-     console.log ('read button trigured' ,library);
-     setSavePlan([...savePlan,library]);
+      const alreadySaved = savePlan.some(
+      (item) => item.id === library.id
+    );
+    if (alreadySaved){
+    toast.error("Already Saved!");
+      return;
+    }setSavePlan([...savePlan,library]);
      toast.success("Save for later");
     }
     return (
