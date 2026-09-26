@@ -23,7 +23,7 @@ const Navbar = () => {
         <li><Link href='/listed-plan' className={pathname === "/listed-plan"? "text-[#C2F800] rounded-2xl bg-[#9ca3af10] px-4 py-0.5": "text-[#9CA3AF] rounded-2xl px-4 py-0.5"}>My Plan</Link></li>
       </ul>
     </div>
-<div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 lg:static lg:translate-x-0">
+<div className="flex items-center gap-2 lg:static lg:translate-x-0">
   <Image
     src={logo}
     alt="FITLOG logo"
