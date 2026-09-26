@@ -24,9 +24,9 @@ const Banner = () => {
       into today’s plan, and watch the week’s work add up.
     </p>
 
-    <button className="bg-[#C2F800] text-black px-5 py-2.5 rounded-md font-semibold text-sm">
+    <a href='#library' className="bg-[#C2F800] text-black px-5 py-2.5 rounded-md font-semibold text-sm">
       BROWSE WORKOUTS
-    </button>
+    </a>
   </div>
 
 

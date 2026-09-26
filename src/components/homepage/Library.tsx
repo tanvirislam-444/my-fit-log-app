@@ -3,7 +3,7 @@ import { MainType } from "@/types/main.type";
 import LibraryCard from "../shared/LibraryCard";
 
 const getLibrary=async()=>{
-const res = await fetch('https://api.abcz.workers.dev/api/fitlog');
+const res = await fetch('https://api.api-store.workers.dev/api/fitlog');
 const data = await res.json();
 return data
 }
@@ -12,6 +12,7 @@ const Library = async () => {
   const libraryData = await getLibrary();
 
   return (
+    <section id="library" className="py-3">
       <div>
     <div className="mx-6 mt-10">
       <h2 className="text-3xl font-bold text-white uppercase">
@@ -29,6 +30,7 @@ const Library = async () => {
       )}
     </div>
     </div>
+    </section>
   );
 };
 

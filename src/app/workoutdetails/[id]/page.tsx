@@ -11,7 +11,7 @@ interface WorkoutDetailsProps {
 }
 
 const getLibrary = async (): Promise<MainType[]> => {
-  const res = await fetch("https://api.abcz.workers.dev/api/fitlog");
+  const res = await fetch("https://api.api-store.workers.dev/api/fitlog");
   const data = await res.json();
   return data;
 };
@@ -33,7 +33,7 @@ const WorkoutDetailsPage = async ({ params }: WorkoutDetailsProps) => {
     <div className="mx-4 my-10 md:mx-8 lg:mx-16">
       <div className="overflow-hidden rounded-2xl border border-[#1F2937] bg-[#111827] shadow-lg">
         <div className="grid grid-cols-1 lg:grid-cols-[40%_60%]">
-          <div className="relative h-[400px] lg:h-[800px] ">
+          <div className="relative h-100 lg:h-200 ">
             <Image
               src={library.image}
               alt={library.name}
